@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your list</title>
+    <link rel="stylesheet" href="./e1/styles.css">
+</head>
+<body>
+    <header>
+        Your order was successfully entered
+    </header>
+    <h3>Your info:</h3> 
+    <p>Name: <%-order.givenName%> <%-order.surname%></p>
+    <p>Email Address: <%-order.email%> </p>  
+    <!-- I couldn't get the email address to get grabbed from the order form, so I'm leaving it like this -->
+    <p>Address: <%-order.address%>, <%-order.city%> </p>
+    <p>         <%-order.province%> , <%-order.country%></p>
+    <p>         <%-order.postcode%> </p>
+    <p>------------------------------------</p>
+    <h3>Your order:</h3>
+    <p>x1 <%-order.order%> <%if(order.order === 'shirt') {%> size: <%-order.size%> <%}%></p>
+    <p>------------------------------------</p>
+    <p>25 Shmeckles have been added to your </p>
+    <p>Enjoy your journey down the giant staircase</p>
+<footer>
+
+</footer>
+</body>
+</html>

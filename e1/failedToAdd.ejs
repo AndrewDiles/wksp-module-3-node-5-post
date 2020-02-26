@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your list</title>
+    <link rel="stylesheet" href="../e1/styles.css">
+</head>
+<body>
+    <header>
+        <% if (number===0) { %>
+            <h1>You currently have nothing left to do.</h1>
+            <h2>Add something to do?</h2>
+        <% } else if (number===1){ %>
+            <h1>You have <%-number%> task to do</h1>
+        <% } else { %>
+            <h1>You have <%-number%> tasks to do</h1>
+        <% } %>
+
+    </header>
+    <p class='failed'> I'm sorry, that last entry seemed rather blank.  Care to try again?</p>
+    <form method='post' action='/addItem2'>
+        <input class='input' type='text' name='item' placeholder='Add your item here!' />
+        <button type='submit'>Submit</button>
+    </form>
+
+    <% list.forEach((todo)=>{ %>
+        <p><%- todo %></p>
+        <form method='post' action='/removeItem/<%=todo%>'>
+            <button type='submit'>Delete</button>
+        </form>
+    <% }); %>
+
+
+
+
+    </form>
+
+
+
+<footer>
+
+</footer>
+</body>
+</html>

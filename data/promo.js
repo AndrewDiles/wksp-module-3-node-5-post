@@ -5,7 +5,7 @@ const stock = {
         'small': '45',
         'medium': '0',
         'large': '21',
-        'xlarge': '19',
+        'extralarge': '19',
     }
 }
 
